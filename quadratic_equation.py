@@ -3,10 +3,8 @@ from math import sqrt
 
 def get_roots(a, b, c):
     discriminant = b ** 2 - 4 * a * c
-    try:
-        discriminant < 0
-    except ValueError:
-        discriminant = None
+    if discriminant < 0:
+        raise ValueError
 
     root1 = (-b - sqrt(discriminant)) / (2 * a)
     root2 = (-b + sqrt(discriminant)) / (2 * a)
@@ -14,8 +12,3 @@ def get_roots(a, b, c):
         return root1, None
     else:
         return root1, root2
-
-
-
-
-
