@@ -4,7 +4,7 @@ from math import sqrt
 def get_roots(a, b, c):
     discriminant = b ** 2 - 4 * a * c
     if discriminant < 0:
-        print("дискриминант отрицательный, корни не являются вещественными числами")
+        raise Exception("discriminant < 0")
 
     root1 = (-b - sqrt(discriminant)) / (2 * a)
     root2 = (-b + sqrt(discriminant)) / (2 * a)
