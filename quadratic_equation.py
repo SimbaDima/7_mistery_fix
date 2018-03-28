@@ -16,7 +16,6 @@ def get_roots(a, b, c):
         return root1, root2
 
 
-print(get_roots(10, 6, 100))
 
 
 
